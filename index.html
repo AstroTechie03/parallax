@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>space</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="Logo">space</a>
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">gallery</a></li>
+            <li><a href="#">more</a></li>
+            
+        </ul>
+    </header>
+
+    <section>
+        <img src="image/stars.png" id="stars">
+        <img src="image/moon.png" id="moon">
+        <img src="image/mountains_behind.png" id="mountains_behind">
+        <h2 id="text">moon light</h2>
+        <a href="#sec" id="btn">Explore!</a>
+        <img src="image/mountains_front.png" id="mountains_front">
+    </section>
+    
+    <div class="sec" id="sec">
+        <h2>Journey to Space</h2>
+        <p>"Space travel is life-enhancing, and anything that's life-enhancing is worth doing. It makes you want to live forever." "Life, forever dying to be born afresh, forever young and eager, will presently stand upon this Earth as upon a footstool, and stretch out its realm amidst the stars."<br><br>“Use time and space; grow slowly into your dreams, infinity will fill you with peace.” “I'm the seeker through the darkness of time and space seeking the light of the universe.” “Time and space is where we chase things we pretend we don't have.” “By allowing myself to just be, i give myself space to purr in gratitude.<br><br>Any surface can be a floor, wall, or ceiling, and therefore astronauts can sleep anywhere. But, weak gravity means that the astronauts may gradually float away while sleeping. To keep that from happening, most astronauts on the ISS sleep by restraining their bodies in small sleeping compartments or sleeping bags.<br><br>Space travellers go through a range of often unpleasant feelings: they feel dizzy, sleepy and weak, suffer from loss of appetite and stomach upsets and lose their sense of time and space. Fortunately, after few days, their bodies adapt to weightlessness and astronauts start to feel both calm and euphoric...<br><br>Space is amazing. The sheer vastness of it, along with the trillions upon trillions of objects in the many billion galaxies of the universe is almost incomprehensible to the human brain. This page is a continuously updated list of the most incredible, awe-inspiring and unbelievable facts about space.</p>
+    </div>
+<!-- 
+        <script src="js/script.js"></script> -->
+<script>
+let stars = document.getElementById('stars');
+let moon = document.getElementById('moon');
+let mountains_behind = document.getElementById('mountains_behind');
+let text = document.getElementById('text');
+let btn = document.getElementById('btn');
+let mountains_front = document.getElementById('mountains_front');
+let header= document.querySelector('header');
+       
+ window.addEventListener('scroll', function(){
+    let value = window.scrollY;
+    stars.style.left = value * 0.25 + 'px';
+    moon.style.top = value * 1.05 + 'px';
+    mountains_behind.style.top = value * 0.5 + 'px';
+    mountains_front.style.top = value * 0 + 'px';
+    text.style.marginRight = value * 4 + 'px';
+    text.style.marginTop = value * 1.5 + 'px';
+    btn.style.marginTop= value * 1.5 + 'px';
+    header.style.top = value * 0.5 + 'px';
+ })
+</script>
+</body>
+</html>
